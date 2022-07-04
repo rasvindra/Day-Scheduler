@@ -11,6 +11,7 @@ textarea{
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  color: #000000;
 }
 
 .jumbotron {
@@ -49,15 +50,15 @@ textarea{
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
-.saveBtn {
+.savetextBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -65,7 +66,7 @@ textarea{
   color: white;
 }
 
-.saveBtn i:hover {
+.savetextBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
