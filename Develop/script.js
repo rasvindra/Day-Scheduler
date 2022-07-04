@@ -1,5 +1,5 @@
 
-//Header displayed time
+//Header displayed today's time
 function showTheTime() {  
     var A = moment().format('[Today is ]dddd, MMMM Do YYYY, h:mm:ss a');    
     document.getElementById("currentDay").innerHTML = A;
@@ -39,14 +39,18 @@ $(".savetextBtn").on("click", function () {
     localStorage.setItem(time, value);
 });
 
-    //supposed to pull from local storage into appropriate time slot. needs rewrite
-for (var i = 7; i < 21; i++) {
-    $(`.hour-${i}`).val(localStorage.getItem(`hour-${i}`));
-}
 
+function fillTimeinfo() {
+    $(".hour").each(function() {
+    var dayPlans = localStorage.getItem(value);
+    var filldayPlans = localStorage.getItem(time);
+    })
+}
+    //supposed to pull from local storage into appropriate time slot. needs rewrite
 
 
 timeBlockColor()
+
 
 
 
