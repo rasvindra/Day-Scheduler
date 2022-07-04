@@ -40,17 +40,17 @@ $(".savetextBtn").on("click", function () {
 });
 
 
+// need to pull data from local storage into array or whatever then itterate through to get values and populate into corresponding id #'s
 function fillTimeinfo() {
     $(".hour").each(function() {
     var dayPlans = localStorage.getItem(value);
     var filldayPlans = localStorage.getItem(time);
     })
 }
-    //supposed to pull from local storage into appropriate time slot. needs rewrite
 
 
 timeBlockColor()
 
 
-
+// will need this for writing from local storage $(this).parent().attr("id")
 
