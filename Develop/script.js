@@ -19,8 +19,7 @@ function timeBlockColor() {
     var hour = moment().hours();
 
     $(".time-block").each(function() {
-        var currHour = .row.attr("id"));
-console.log(parseInt($(this)))
+        var currHour = parseInt($(this).parent().attr("id"));
 
         if (currHour > hour) {
             $(this).addClass("future");
@@ -33,14 +32,14 @@ console.log(parseInt($(this)))
 };
 
 
-    // supposed to save to local sotage 
+    // saves to Local Storage
 $(".savetextBtn").on("click", function () {
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
 });
 
-    //supposed to pull from local storage into appropriate time slot
+    //supposed to pull from local storage into appropriate time slot. needs rewrite
 for (var i = 7; i < 21; i++) {
     $(`.hour-${i}`).val(localStorage.getItem(`hour-${i}`));
 }
