@@ -10,27 +10,28 @@ setInterval(showTheTime, 250); // saw it was recomended to update it more than e
 
 // varaibles I though I might need
 var day = moment().format("LLLL");
+var hour = moment().hours();
 var momentTime = moment().startOf("day").add(7, "hour");
-var hour = moment().format("H");
-
-console.log(momentTime)//test
-console.log(hour)//test
 
 
-for (var i = 7; i < 21; i++) {
-    var timeSlot = momentTime.add(1, "hour").format("HH:mm A");//
-    var currentState;
+// each time-block is color coded to indicate whether it is in the past, present, or future
+function timeBlockColor() {
+    var hour = moment().hours();
 
-    //supposed to change color of containers based on current time
-    if (hour == i) {
-        currentState = 'present';
-    } else if (hour > i) {
-        currentState = 'future';
-    } else if (hour < i) {
-        currentState = 'past';
-    }
+    $(".time-block").each(function() {
+        var currHour = .row.attr("id"));
+console.log(parseInt($(this)))
 
+        if (currHour > hour) {
+            $(this).addClass("future");
+        } else if (currHour === hour) {
+            $(this).addClass("present");
+        } else {
+            $(this).addClass("past");
+        }
+    })
 };
+
 
     // supposed to save to local sotage 
 $(".savetextBtn").on("click", function () {
@@ -46,7 +47,7 @@ for (var i = 7; i < 21; i++) {
 
 
 
-
+timeBlockColor()
 
 
 
